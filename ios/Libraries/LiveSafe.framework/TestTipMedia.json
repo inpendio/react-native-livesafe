@@ -1,0 +1,14 @@
+[
+{
+"mediaId" : 10,
+"contentType" : "image/jpeg",
+"dateCreated": 1462314005,
+"name": "file1.jpeg"
+},
+{
+"mediaId" : 11,
+"contentType" : "image/jpeg",
+"dateCreated": 1462314005,
+"name": "file2.jpeg"
+}
+]

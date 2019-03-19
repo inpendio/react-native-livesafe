@@ -1,0 +1,15 @@
+{
+  "media":
+  [
+   {
+     "mediaId" : 10,
+     "contentType" : "image/jpeg",
+     "name": "file1.jpeg"
+   },
+   {
+     "mediaId" : 11,
+     "contentType" : "image/jpeg",
+     "name": "file2.jpeg"
+   }
+  ]
+}

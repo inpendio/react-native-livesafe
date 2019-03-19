@@ -1,0 +1,14 @@
+{
+  "organizationId": 1,
+  "organizationName": "LiveSafe",
+  "subject": "Test Subject¸",
+  "body": "This is a sample broadcast message for demonstration purposes. This message should wrap down and be multiple lines tall, but not require the screen to scroll.  It contains a url www.livesafemobile.com, and a phone number 123-456-7890.",
+  "eventType": 20,
+  "eventId": 10,
+  "broadcastId": 11,
+  "location": {
+    "latitude": 38.895971,
+    "longitude": -77.073609
+  },
+  "dateCreated": 1465896649
+}

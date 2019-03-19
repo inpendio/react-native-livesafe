@@ -1,0 +1,11 @@
+framework module LiveSafe {
+  umbrella header "LiveSafe.h"
+
+  export *
+  module * { export * }
+}
+
+module LiveSafe.Swift {
+    header "LiveSafe-Swift.h"
+    requires objc
+}

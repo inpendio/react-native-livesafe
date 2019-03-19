@@ -1,0 +1,11 @@
+framework module Billboard {
+  umbrella header "Billboard.h"
+
+  export *
+  module * { export * }
+}
+
+module Billboard.Swift {
+    header "Billboard-Swift.h"
+    requires objc
+}

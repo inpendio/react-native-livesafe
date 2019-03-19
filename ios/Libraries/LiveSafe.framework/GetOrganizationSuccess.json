@@ -1,0 +1,208 @@
+{
+  "organizationId": 19,
+  "name": "SSOAuthLeaf3",
+  "isPublic": true,
+  "pinRequired": false,
+  "hasCustomTerms": false,
+  "ssoUrl": "https://devstg-idp.livesafemobile.com:9031/idp/startSSO.ping?PartnerSpId=livesafe",
+  "tags": [
+           "LiveSafe",
+           "ls"
+           ],
+  "type": "L",
+  "defaultScreens": {
+    "homeScreen": [
+                   {
+                   "accountText": "Report Tips",
+                   "action": "reporttips",
+                   "displayOrder": 1,
+                   "enabled": true,
+                   "flurryKey": "report_tips_home",
+                   "id": "btnReport",
+                   "img": "report_button.png",
+                   "title": "Report Tips"
+                   },
+                   {
+                   "accountText": "Emergency Options",
+                   "action": "emergencyscreen",
+                   "displayOrder": 2,
+                   "enabled": true,
+                   "flurryKey": "emergency_home",
+                   "id": "btnEmergency",
+                   "img": "button_goto_emergency.png",
+                   "title": "Emergency Options"
+                   },
+                   {
+                   "accountText": "Safety Map",
+                   "action": "safetymap",
+                   "displayOrder": 3,
+                   "enabled": true,
+                   "flurryKey": "view_map_main",
+                   "id": "btnMap",
+                   "img": "view_map_button.png",
+                   "title": "Safety Map"
+                   },
+                   {
+                   "accountText": "Go Safe",
+                   "action": "safeoptions",
+                   "displayOrder": 4,
+                   "enabled": true,
+                   "flurryKey": "staysafe",
+                   "id": "btnSafe",
+                   "img": "gosafe_button.png",
+                   "title": "GoSafe"
+                   }
+                   ],
+    "emergencyScreen": [
+                        {
+                        "accountText": "Call 911",
+                        "action": "call",
+                        "bgColor": "#FFFF7C57",
+                        "details": "911",
+                        "displayOrder": 1,
+                        "enabled": true,
+                        "flurryKey": "emergency",
+                        "id": "btnCall911",
+                        "title": "Call 911",
+                        "tracking": 1,
+                        "textColor": "#FFFFFFFF",
+                        "typeId": 13
+                        },
+                        {
+                        "accountText": "Tap here to stop location sharing",
+                        "action": "stoptracking",
+                        "bgColor": "#FF4D4D4D",
+                        "displayOrder": 4,
+                        "enabled": true,
+                        "flurryKey": "stop_tracking",
+                        "id": "btnStopLocation",
+                        "title": "Stop Location Sharing",
+                        "tracking": 0,
+                        "textColor": "#FFFFFFFF"
+                        }
+                        ]
+  },
+  "eventTypes": [
+                 {
+                 "eventTypeId": 6,
+                 "displayName": "Accident",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype6.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype6.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials",
+                 "isAnonymousDisabled": true
+                 },
+                 {
+                 "eventTypeId": 3,
+                 "displayName": "Assault/Abuse",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype3.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype3.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials",
+                 "isAnonymousDisabled": false
+                 },
+                 {
+                 "eventTypeId": 17,
+                 "displayName": "Disturbance",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype17.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype17.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 8,
+                 "displayName": "Drugs/Alcohol",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype8.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype8.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 11,
+                 "displayName": "Harassment",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype11.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype11.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 5,
+                 "displayName": "Mental Health",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype5.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype5.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 0,
+                 "displayName": "Other",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype0.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype0.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 10,
+                 "displayName": "Repair Needed",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype10.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype10.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 21,
+                 "displayName": "Suggestion",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype21.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype21.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 2,
+                 "displayName": "Suspicious Activity",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype2.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype2.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 1,
+                 "displayName": "Theft",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype1.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype1.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Chat with safety officials"
+                 },
+                 {
+                 "eventTypeId": 7,
+                 "displayName": "Vandalism",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype7.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype7.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Custom Chat Text Value",
+                 "visible": true
+                 },
+                 {
+                 "eventTypeId": 222,
+                 "displayName": "Super Secret Tip",
+                 "imageName": "https://static.livesafemobile.com/images/tiptypes/default/eventtype7.png",
+                 "mapImageName": "https://static.livesafemobile.com/images/tiptypes/map/mapeventtype7.png",
+                 "hintText": "Enter your tip details here",
+                 "chatText": "Custom Chat Text Value",
+                 "visible": false,
+                 }
+                 ],
+  "config": {
+    "chatText": "Chat with safety officials",
+    "isAnonymousDisabled": false,
+    "callEnabledInSw": false,
+    "tags": "LiveSafe|ls",
+    "addEventResponseMessage": "Based upon your location, your tip has been submitted to SSOAuthLeaf3.  They will be in touch with you should they require any further information."
+  },
+  "totalLeaves": 0,
+  "questions": [],
+  "cartel": {
+    "id": 6,
+    "name": "PinAuthCartel"
+  }
+}

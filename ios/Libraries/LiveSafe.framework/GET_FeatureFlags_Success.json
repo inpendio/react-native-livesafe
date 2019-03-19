@@ -1,0 +1,12 @@
+{
+  "features": [
+    {
+      "id": "c39e9d1e-9958-11e7-852a-06783ada4181",
+      "name": "SafeDrive-v2"
+    },
+    {
+      "id": "c9c2cb63-6234-4935-94c5-1067d10a4f5c",
+      "name": "Active Geofence Broadcast"
+    }
+  ]
+}

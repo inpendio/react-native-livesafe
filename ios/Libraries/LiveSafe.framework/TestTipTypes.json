@@ -1,0 +1,22 @@
+[
+              {
+              "displayName" : "Other",
+              "eventTypeId" : 1
+              },
+              {
+              "displayName" : "Assault",
+              "eventTypeId" : 2
+              },
+              {
+              "displayName" : "Drugs/Alchol",
+              "eventTypeId" : 3
+              },
+              {
+              "displayName" : "Suspicious Activity",
+              "eventTypeId" : 4
+              },
+              {
+              "displayName" : "Theft",
+              "eventTypeId" : 5
+              }
+]

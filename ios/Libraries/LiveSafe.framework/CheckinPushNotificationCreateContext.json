@@ -1,0 +1,21 @@
+{
+  "aps" : {
+    "alert" : "LiveSafe's & Test: b2",
+    "badge" : 1,
+    "sound" : "default"
+  },
+  "broadcastid" : 4311,
+  "d" : 1,
+  "du" : "2016-12-15T20:28:35.444Z",
+  "edc" : 1481833715,
+  "eid" : 27186,
+  "lcm" : 0,
+  "notid" : 3,
+  "ntid" : 150,
+  "orgid" : 19,
+  "rid" : 27186,
+  "rtid" : 20,
+  "source" : "livesafe",
+  "sunm" : "LiveSafe's & Test"
+}
+

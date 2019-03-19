@@ -1,0 +1,1424 @@
+[
+  {
+    "countryname": "Vanuatu",
+    "phonecode": "678",
+    "countrycode": "VU",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Vietnam",
+    "phonecode": "84",
+    "countrycode": "VN",
+    "emergencynumber": "113"
+  },
+  {
+    "countryname": "Ecuador",
+    "phonecode": "593",
+    "countrycode": "EC",
+    "emergencynumber": "101"
+  },
+  {
+    "countryname": "U.S. Virgin Islands",
+    "phonecode": "1",
+    "countrycode": "VI",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Algeria",
+    "phonecode": "213",
+    "countrycode": "DZ",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "British Virgin Islands",
+    "phonecode": "1",
+    "countrycode": "VG",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Venezuela",
+    "phonecode": "58",
+    "countrycode": "VE",
+    "emergencynumber": "171"
+  },
+  {
+    "countryname": "Dominica",
+    "phonecode": "1",
+    "countrycode": "DM",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Saint Vincent and the Grenadines",
+    "phonecode": "1",
+    "countrycode": "VC",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Dominican Republic",
+    "phonecode": "1",
+    "countrycode": "DO",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Vatican",
+    "phonecode": "379",
+    "countrycode": "VA",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Germany",
+    "phonecode": "49",
+    "countrycode": "DE",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Uzbekistan",
+    "phonecode": "998",
+    "countrycode": "UZ",
+    "emergencynumber": "102"
+  },
+  {
+    "countryname": "Uruguay",
+    "phonecode": "598",
+    "countrycode": "UY",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Denmark",
+    "phonecode": "45",
+    "countrycode": "DK",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Djibouti",
+    "phonecode": "253",
+    "countrycode": "DJ",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "United States",
+    "phonecode": "1",
+    "countrycode": "US",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "United States Minor Outlying Islands",
+    "phonecode": "1",
+    "countrycode": "UM",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Uganda",
+    "phonecode": "256",
+    "countrycode": "UG",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Ukraine",
+    "phonecode": "380",
+    "countrycode": "UA",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Ethiopia",
+    "phonecode": "251",
+    "countrycode": "ET",
+    "emergencynumber": "991"
+  },
+  {
+    "countryname": "Spain",
+    "phonecode": "34",
+    "countrycode": "ES",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Eritrea",
+    "phonecode": "291",
+    "countrycode": "ER"
+  },
+  {
+    "countryname": "Western Sahara",
+    "phonecode": "212",
+    "countrycode": "EH",
+    "emergencynumber": "150"
+  },
+  {
+    "countryname": "Egypt",
+    "phonecode": "20",
+    "countrycode": "EG",
+    "emergencynumber": "122"
+  },
+  {
+    "countryname": "Estonia",
+    "phonecode": "372",
+    "countrycode": "EE",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Tanzania",
+    "phonecode": "255",
+    "countrycode": "TZ",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Trinidad and Tobago",
+    "phonecode": "1",
+    "countrycode": "TT",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Taiwan",
+    "phonecode": "886",
+    "countrycode": "TW",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Tuvalu",
+    "phonecode": "688",
+    "countrycode": "TV",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Grenada",
+    "phonecode": "1",
+    "countrycode": "GD",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Georgia",
+    "phonecode": "995",
+    "countrycode": "GE",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "French Guiana",
+    "phonecode": "594",
+    "countrycode": "GF",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Gabon",
+    "phonecode": "241",
+    "countrycode": "GA",
+    "emergencynumber": "1730"
+  },
+  {
+    "countryname": "United Kingdom",
+    "phonecode": "44",
+    "countrycode": "GB",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "France",
+    "phonecode": "33",
+    "countrycode": "FR",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Faroe Islands",
+    "phonecode": "298",
+    "countrycode": "FO",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Falkland Islands",
+    "phonecode": "500",
+    "countrycode": "FK",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Fiji",
+    "phonecode": "679",
+    "countrycode": "FJ",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Micronesia",
+    "phonecode": "691",
+    "countrycode": "FM",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Finland",
+    "phonecode": "358",
+    "countrycode": "FI",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Samoa",
+    "phonecode": "685",
+    "countrycode": "WS",
+    "emergencynumber": "995"
+  },
+  {
+    "countryname": "Guyana",
+    "phonecode": "592",
+    "countrycode": "GY",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Guinea Bissau",
+    "phonecode": "245",
+    "countrycode": "GW"
+  },
+  {
+    "countryname": "Guam",
+    "phonecode": "1",
+    "countrycode": "GU",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Guatemala",
+    "phonecode": "502",
+    "countrycode": "GT",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Greece",
+    "phonecode": "30",
+    "countrycode": "GR",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Equatorial Guinea",
+    "phonecode": "240",
+    "countrycode": "GQ"
+  },
+  {
+    "countryname": "Wallis and Futuna",
+    "phonecode": "681",
+    "countrycode": "WF"
+  },
+  {
+    "countryname": "Guadeloupe",
+    "phonecode": "590",
+    "countrycode": "GP",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Guinea",
+    "phonecode": "224",
+    "countrycode": "GN",
+    "emergencynumber": "122"
+  },
+  {
+    "countryname": "Gambia",
+    "phonecode": "220",
+    "countrycode": "GM",
+    "emergencynumber": "117"
+  },
+  {
+    "countryname": "Greenland",
+    "phonecode": "299",
+    "countrycode": "GL",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Gibraltar",
+    "phonecode": "350",
+    "countrycode": "GI",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Ghana",
+    "phonecode": "233",
+    "countrycode": "GH",
+    "emergencynumber": "191"
+  },
+  {
+    "countryname": "Guernsey",
+    "phonecode": "44",
+    "countrycode": "GG",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Reunion",
+    "phonecode": "262",
+    "countrycode": "RE",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "Romania",
+    "phonecode": "40",
+    "countrycode": "RO",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Austria",
+    "phonecode": "43",
+    "countrycode": "AT",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "American Samoa",
+    "phonecode": "1",
+    "countrycode": "AS",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Argentina",
+    "phonecode": "54",
+    "countrycode": "AR",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Aland Islands",
+    "phonecode": "358",
+    "countrycode": "AX",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Qatar",
+    "phonecode": "974",
+    "countrycode": "QA",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Aruba",
+    "phonecode": "297",
+    "countrycode": "AW",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Australia",
+    "phonecode": "61",
+    "countrycode": "AU",
+    "emergencynumber": "000"
+  },
+  {
+    "countryname": "Azerbaijan",
+    "phonecode": "994",
+    "countrycode": "AZ",
+    "emergencynumber": "102"
+  },
+  {
+    "countryname": "Bosnia and Herzegovina",
+    "phonecode": "387",
+    "countrycode": "BA",
+    "emergencynumber": "122"
+  },
+  {
+    "countryname": "Portugal",
+    "phonecode": "351",
+    "countrycode": "PT",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Andorra",
+    "phonecode": "376",
+    "countrycode": "AD",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Palau",
+    "phonecode": "680",
+    "countrycode": "PW",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Antigua and Barbuda",
+    "phonecode": "1",
+    "countrycode": "AG",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "United Arab Emirates",
+    "phonecode": "971",
+    "countrycode": "AE",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Puerto Rico",
+    "phonecode": "1",
+    "countrycode": "PR",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Afghanistan",
+    "phonecode": "93",
+    "countrycode": "AF",
+    "emergencynumber": "119"
+  },
+  {
+    "countryname": "Palestinian Territory",
+    "phonecode": "970",
+    "countrycode": "PS"
+  },
+  {
+    "countryname": "Albania",
+    "phonecode": "355",
+    "countrycode": "AL",
+    "emergencynumber": "129"
+  },
+  {
+    "countryname": "Anguilla",
+    "phonecode": "1",
+    "countrycode": "AI",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Angola",
+    "phonecode": "244",
+    "countrycode": "AO",
+    "emergencynumber": "113"
+  },
+  {
+    "countryname": "Paraguay",
+    "phonecode": "595",
+    "countrycode": "PY",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Armenia",
+    "phonecode": "374",
+    "countrycode": "AM",
+    "emergencynumber": "102"
+  },
+  {
+    "countryname": "Togo",
+    "phonecode": "228",
+    "countrycode": "TG",
+    "emergencynumber": "117"
+  },
+  {
+    "countryname": "Botswana",
+    "phonecode": "267",
+    "countrycode": "BW",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Belarus",
+    "phonecode": "375",
+    "countrycode": "BY",
+    "emergencynumber": "102"
+  },
+  {
+    "countryname": "Chad",
+    "phonecode": "235",
+    "countrycode": "TD",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "Bahamas",
+    "phonecode": "1",
+    "countrycode": "BS",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Tokelau",
+    "phonecode": "690",
+    "countrycode": "TK"
+  },
+  {
+    "countryname": "Brazil",
+    "phonecode": "55",
+    "countrycode": "BR",
+    "emergencynumber": "190"
+  },
+  {
+    "countryname": "Tajikistan",
+    "phonecode": "992",
+    "countrycode": "TJ",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Thailand",
+    "phonecode": "66",
+    "countrycode": "TH",
+    "emergencynumber": "191"
+  },
+  {
+    "countryname": "Bhutan",
+    "phonecode": "975",
+    "countrycode": "BT",
+    "emergencynumber": "113"
+  },
+  {
+    "countryname": "Tonga",
+    "phonecode": "676",
+    "countrycode": "TO",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Tunisia",
+    "phonecode": "216",
+    "countrycode": "TN",
+    "emergencynumber": "197"
+  },
+  {
+    "countryname": "Turkmenistan",
+    "phonecode": "993",
+    "countrycode": "TM"
+  },
+  {
+    "countryname": "East Timor",
+    "phonecode": "670",
+    "countrycode": "TL",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Canada",
+    "phonecode": "1",
+    "countrycode": "CA",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Turkey",
+    "phonecode": "90",
+    "countrycode": "TR",
+    "emergencynumber": "155"
+  },
+  {
+    "countryname": "Belize",
+    "phonecode": "501",
+    "countrycode": "BZ",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Burkina Faso",
+    "phonecode": "226",
+    "countrycode": "BF",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "El Salvador",
+    "phonecode": "503",
+    "countrycode": "SV",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Bulgaria",
+    "phonecode": "359",
+    "countrycode": "BG",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Bahrain",
+    "phonecode": "973",
+    "countrycode": "BH",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "South Sudan",
+    "phonecode": "211",
+    "countrycode": "SS"
+  },
+  {
+    "countryname": "Burundi",
+    "phonecode": "257",
+    "countrycode": "BI",
+    "emergencynumber": "117"
+  },
+  {
+    "countryname": "Sao Tome and Principe",
+    "phonecode": "239",
+    "countrycode": "ST"
+  },
+  {
+    "countryname": "Barbados",
+    "phonecode": "1",
+    "countrycode": "BB",
+    "emergencynumber": "211"
+  },
+  {
+    "countryname": "Syria",
+    "phonecode": "963",
+    "countrycode": "SY",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Swaziland",
+    "phonecode": "268",
+    "countrycode": "SZ"
+  },
+  {
+    "countryname": "Bangladesh",
+    "phonecode": "880",
+    "countrycode": "BD",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Belgium",
+    "phonecode": "32",
+    "countrycode": "BE",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Sint Maarten",
+    "phonecode": "599",
+    "countrycode": "SX"
+  },
+  {
+    "countryname": "Brunei",
+    "phonecode": "673",
+    "countrycode": "BN",
+    "emergencynumber": "993"
+  },
+  {
+    "countryname": "Bolivia",
+    "phonecode": "591",
+    "countrycode": "BO",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Bonaire, Saint Eustatius and Saba ",
+    "phonecode": "599",
+    "countrycode": "BQ"
+  },
+  {
+    "countryname": "Benin",
+    "phonecode": "229",
+    "countrycode": "BJ"
+  },
+  {
+    "countryname": "Turks and Caicos Islands",
+    "phonecode": "1",
+    "countrycode": "TC",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Saint Barthelemy",
+    "phonecode": "590",
+    "countrycode": "BL"
+  },
+  {
+    "countryname": "Bermuda",
+    "phonecode": "1",
+    "countrycode": "BM",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Czech Republic",
+    "phonecode": "420",
+    "countrycode": "CZ",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Sudan",
+    "phonecode": "249",
+    "countrycode": "SD",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Cyprus",
+    "phonecode": "357",
+    "countrycode": "CY",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Seychelles",
+    "phonecode": "248",
+    "countrycode": "SC",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Christmas Island",
+    "phonecode": "61",
+    "countrycode": "CX"
+  },
+  {
+    "countryname": "Curacao",
+    "phonecode": "599",
+    "countrycode": "CW",
+    "emergencynumber": "444444"
+  },
+  {
+    "countryname": "Sweden",
+    "phonecode": "46",
+    "countrycode": "SE",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Saint Helena",
+    "phonecode": "290",
+    "countrycode": "SH",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Cape Verde",
+    "phonecode": "238",
+    "countrycode": "CV",
+    "emergencynumber": "132"
+  },
+  {
+    "countryname": "Cuba",
+    "phonecode": "53",
+    "countrycode": "CU",
+    "emergencynumber": "106"
+  },
+  {
+    "countryname": "Singapore",
+    "phonecode": "65",
+    "countrycode": "SG",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Svalbard and Jan Mayen",
+    "phonecode": "47",
+    "countrycode": "SJ"
+  },
+  {
+    "countryname": "Slovenia",
+    "phonecode": "386",
+    "countrycode": "SI",
+    "emergencynumber": "113"
+  },
+  {
+    "countryname": "Sierra Leone",
+    "phonecode": "232",
+    "countrycode": "SL",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Slovakia",
+    "phonecode": "421",
+    "countrycode": "SK",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Senegal",
+    "phonecode": "221",
+    "countrycode": "SN"
+  },
+  {
+    "countryname": "San Marino",
+    "phonecode": "378",
+    "countrycode": "SM",
+    "emergencynumber": "113"
+  },
+  {
+    "countryname": "Somalia",
+    "phonecode": "252",
+    "countrycode": "SO",
+    "emergencynumber": "888"
+  },
+  {
+    "countryname": "Suriname",
+    "phonecode": "597",
+    "countrycode": "SR",
+    "emergencynumber": "115"
+  },
+  {
+    "countryname": "Ivory Coast",
+    "phonecode": "225",
+    "countrycode": "CI"
+  },
+  {
+    "countryname": "Serbia",
+    "phonecode": "381",
+    "countrycode": "RS",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Republic of the Congo",
+    "phonecode": "242",
+    "countrycode": "CG"
+  },
+  {
+    "countryname": "Russia",
+    "phonecode": "7",
+    "countrycode": "RU",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Switzerland",
+    "phonecode": "41",
+    "countrycode": "CH",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Rwanda",
+    "phonecode": "250",
+    "countrycode": "RW",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Central African Republic",
+    "phonecode": "236",
+    "countrycode": "CF"
+  },
+  {
+    "countryname": "Cocos Islands",
+    "phonecode": "61",
+    "countrycode": "CC"
+  },
+  {
+    "countryname": "Democratic Republic of the Congo",
+    "phonecode": "243",
+    "countrycode": "CD"
+  },
+  {
+    "countryname": "Costa Rica",
+    "phonecode": "506",
+    "countrycode": "CR",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Colombia",
+    "phonecode": "57",
+    "countrycode": "CO",
+    "emergencynumber": "123"
+  },
+  {
+    "countryname": "Cameroon",
+    "phonecode": "237",
+    "countrycode": "CM"
+  },
+  {
+    "countryname": "China",
+    "phonecode": "86",
+    "countrycode": "CN",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Saudi Arabia",
+    "phonecode": "966",
+    "countrycode": "SA",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Cook Islands",
+    "phonecode": "682",
+    "countrycode": "CK",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Solomon Islands",
+    "phonecode": "677",
+    "countrycode": "SB",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Chile",
+    "phonecode": "56",
+    "countrycode": "CL",
+    "emergencynumber": "133"
+  },
+  {
+    "countryname": "Latvia",
+    "phonecode": "371",
+    "countrycode": "LV",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Luxembourg",
+    "phonecode": "352",
+    "countrycode": "LU",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Lithuania",
+    "phonecode": "370",
+    "countrycode": "LT",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Libya",
+    "phonecode": "218",
+    "countrycode": "LY",
+    "emergencynumber": "193"
+  },
+  {
+    "countryname": "Lesotho",
+    "phonecode": "266",
+    "countrycode": "LS",
+    "emergencynumber": "123"
+  },
+  {
+    "countryname": "Liberia",
+    "phonecode": "231",
+    "countrycode": "LR",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Madagascar",
+    "phonecode": "261",
+    "countrycode": "MG",
+    "emergencynumber": "117"
+  },
+  {
+    "countryname": "Marshall Islands",
+    "phonecode": "692",
+    "countrycode": "MH"
+  },
+  {
+    "countryname": "Montenegro",
+    "phonecode": "382",
+    "countrycode": "ME",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Saint Martin",
+    "phonecode": "590",
+    "countrycode": "MF"
+  },
+  {
+    "countryname": "Macedonia",
+    "phonecode": "389",
+    "countrycode": "MK",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Mali",
+    "phonecode": "223",
+    "countrycode": "ML"
+  },
+  {
+    "countryname": "Monaco",
+    "phonecode": "377",
+    "countrycode": "MC",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Moldova",
+    "phonecode": "373",
+    "countrycode": "MD",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Morocco",
+    "phonecode": "212",
+    "countrycode": "MA",
+    "emergencynumber": "19"
+  },
+  {
+    "countryname": "Maldives",
+    "phonecode": "960",
+    "countrycode": "MV",
+    "emergencynumber": "119"
+  },
+  {
+    "countryname": "Mauritius",
+    "phonecode": "230",
+    "countrycode": "MU",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Mexico",
+    "phonecode": "52",
+    "countrycode": "MX",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Malawi",
+    "phonecode": "265",
+    "countrycode": "MW",
+    "emergencynumber": "997"
+  },
+  {
+    "countryname": "Mozambique",
+    "phonecode": "258",
+    "countrycode": "MZ",
+    "emergencynumber": "119"
+  },
+  {
+    "countryname": "Malaysia",
+    "phonecode": "60",
+    "countrycode": "MY",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Mongolia",
+    "phonecode": "976",
+    "countrycode": "MN",
+    "emergencynumber": "102"
+  },
+  {
+    "countryname": "Myanmar",
+    "phonecode": "95",
+    "countrycode": "MM"
+  },
+  {
+    "countryname": "Northern Mariana Islands",
+    "phonecode": "1",
+    "countrycode": "MP"
+  },
+  {
+    "countryname": "Macao",
+    "phonecode": "853",
+    "countrycode": "MO"
+  },
+  {
+    "countryname": "Mauritania",
+    "phonecode": "222",
+    "countrycode": "MR",
+    "emergencynumber": "117"
+  },
+  {
+    "countryname": "Martinique",
+    "phonecode": "596",
+    "countrycode": "MQ",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "Malta",
+    "phonecode": "356",
+    "countrycode": "MT",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Montserrat",
+    "phonecode": "1",
+    "countrycode": "MS",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Norfolk Island",
+    "phonecode": "672",
+    "countrycode": "NF"
+  },
+  {
+    "countryname": "Nigeria",
+    "phonecode": "234",
+    "countrycode": "NG",
+    "emergencynumber": "199"
+  },
+  {
+    "countryname": "Nicaragua",
+    "phonecode": "505",
+    "countrycode": "NI",
+    "emergencynumber": "118"
+  },
+  {
+    "countryname": "Netherlands",
+    "phonecode": "31",
+    "countrycode": "NL",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Namibia",
+    "phonecode": "264",
+    "countrycode": "NA"
+  },
+  {
+    "countryname": "New Caledonia",
+    "phonecode": "687",
+    "countrycode": "NC",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "Niger",
+    "phonecode": "227",
+    "countrycode": "NE"
+  },
+  {
+    "countryname": "New Zealand",
+    "phonecode": "64",
+    "countrycode": "NZ",
+    "emergencynumber": "111"
+  },
+  {
+    "countryname": "Niue",
+    "phonecode": "683",
+    "countrycode": "NU"
+  },
+  {
+    "countryname": "Nauru",
+    "phonecode": "674",
+    "countrycode": "NR"
+  },
+  {
+    "countryname": "Nepal",
+    "phonecode": "977",
+    "countrycode": "NP",
+    "emergencynumber": "100"
+  },
+  {
+    "countryname": "Norway",
+    "phonecode": "47",
+    "countrycode": "NO",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Oman",
+    "phonecode": "968",
+    "countrycode": "OM",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Poland",
+    "phonecode": "48",
+    "countrycode": "PL",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Saint Pierre and Miquelon",
+    "phonecode": "508",
+    "countrycode": "PM",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "Pitcairn",
+    "phonecode": "870",
+    "countrycode": "PN"
+  },
+  {
+    "countryname": "Philippines",
+    "phonecode": "63",
+    "countrycode": "PH",
+    "emergencynumber": "117"
+  },
+  {
+    "countryname": "Pakistan",
+    "phonecode": "92",
+    "countrycode": "PK",
+    "emergencynumber": "15"
+  },
+  {
+    "countryname": "Peru",
+    "phonecode": "51",
+    "countrycode": "PE",
+    "emergencynumber": "105"
+  },
+  {
+    "countryname": "French Polynesia",
+    "phonecode": "689",
+    "countrycode": "PF",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "Papua New Guinea",
+    "phonecode": "675",
+    "countrycode": "PG"
+  },
+  {
+    "countryname": "Panama",
+    "phonecode": "507",
+    "countrycode": "PA",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Hong Kong",
+    "phonecode": "852",
+    "countrycode": "HK",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "South Africa",
+    "phonecode": "27",
+    "countrycode": "ZA",
+    "emergencynumber": "10111"
+  },
+  {
+    "countryname": "Honduras",
+    "phonecode": "504",
+    "countrycode": "HN",
+    "emergencynumber": "199"
+  },
+  {
+    "countryname": "Croatia",
+    "phonecode": "385",
+    "countrycode": "HR",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Haiti",
+    "phonecode": "509",
+    "countrycode": "HT",
+    "emergencynumber": "114"
+  },
+  {
+    "countryname": "Hungary",
+    "phonecode": "36",
+    "countrycode": "HU",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Zambia",
+    "phonecode": "260",
+    "countrycode": "ZM",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Indonesia",
+    "phonecode": "62",
+    "countrycode": "ID",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Zimbabwe",
+    "phonecode": "263",
+    "countrycode": "ZW",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Ireland",
+    "phonecode": "353",
+    "countrycode": "IE",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Israel",
+    "phonecode": "972",
+    "countrycode": "IL",
+    "emergencynumber": "100"
+  },
+  {
+    "countryname": "Isle of Man",
+    "phonecode": "44",
+    "countrycode": "IM",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "India",
+    "phonecode": "91",
+    "countrycode": "IN",
+    "emergencynumber": "100"
+  },
+  {
+    "countryname": "British Indian Ocean Territory",
+    "phonecode": "246",
+    "countrycode": "IO"
+  },
+  {
+    "countryname": "Iraq",
+    "phonecode": "964",
+    "countrycode": "IQ"
+  },
+  {
+    "countryname": "Iran",
+    "phonecode": "98",
+    "countrycode": "IR",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Iceland",
+    "phonecode": "354",
+    "countrycode": "IS",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Yemen",
+    "phonecode": "967",
+    "countrycode": "YE"
+  },
+  {
+    "countryname": "Italy",
+    "phonecode": "39",
+    "countrycode": "IT",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Jersey",
+    "phonecode": "44",
+    "countrycode": "JE",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Mayotte",
+    "phonecode": "262",
+    "countrycode": "YT"
+  },
+  {
+    "countryname": "Japan",
+    "phonecode": "81",
+    "countrycode": "JP",
+    "emergencynumber": "110"
+  },
+  {
+    "countryname": "Jordan",
+    "phonecode": "962",
+    "countrycode": "JO"
+  },
+  {
+    "countryname": "Jamaica",
+    "phonecode": "1",
+    "countrycode": "JM",
+    "emergencynumber": "119"
+  },
+  {
+    "countryname": "Kiribati",
+    "phonecode": "686",
+    "countrycode": "KI",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "Cambodia",
+    "phonecode": "855",
+    "countrycode": "KH",
+    "emergencynumber": "117"
+  },
+  {
+    "countryname": "Kyrgyzstan",
+    "phonecode": "996",
+    "countrycode": "KG",
+    "emergencynumber": "102"
+  },
+  {
+    "countryname": "Kenya",
+    "phonecode": "254",
+    "countrycode": "KE",
+    "emergencynumber": "999"
+  },
+  {
+    "countryname": "North Korea",
+    "phonecode": "850",
+    "countrycode": "KP"
+  },
+  {
+    "countryname": "South Korea",
+    "phonecode": "82",
+    "countrycode": "KR",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Comoros",
+    "phonecode": "269",
+    "countrycode": "KM",
+    "emergencynumber": "17"
+  },
+  {
+    "countryname": "Saint Kitts and Nevis",
+    "phonecode": "1",
+    "countrycode": "KN",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Kuwait",
+    "phonecode": "965",
+    "countrycode": "KW",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Cayman Islands",
+    "phonecode": "1",
+    "countrycode": "KY",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Kazakhstan",
+    "phonecode": "7",
+    "countrycode": "KZ",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Laos",
+    "phonecode": "856",
+    "countrycode": "LA",
+    "emergencynumber": "191"
+  },
+  {
+    "countryname": "Saint Lucia",
+    "phonecode": "1",
+    "countrycode": "LC",
+    "emergencynumber": "911"
+  },
+  {
+    "countryname": "Lebanon",
+    "phonecode": "961",
+    "countrycode": "LB",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Liechtenstein",
+    "phonecode": "423",
+    "countrycode": "LI",
+    "emergencynumber": "112"
+  },
+  {
+    "countryname": "Sri Lanka",
+    "phonecode": "94",
+    "countrycode": "LK",
+    "emergencynumber": "119"
+  }
+]

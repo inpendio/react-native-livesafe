@@ -10,6 +10,18 @@
 
 #### iOS
 
+Add the following Pods to the project's Podfile
+
+```
+  pod 'Alamofire', '4.7.3'
+  pod 'SwiftyJSON', '4.1.0'
+  pod 'ObjectMapper', '3.3.0'
+  pod 'lottie-ios', '2.5.0'
+  pod 'GoogleMaps', '2.6.0'
+  pod 'SDWebImage', '4.3.2'
+```
+
+alternatively if not using CocoaPods, you can download the binary for each framework and link them manually
 
 #### Android
 
@@ -42,12 +54,12 @@ LiveSafe.showMap();
 /**
  * Return list of Tips. Check TipType for model
  */
-LiveSafe.getTips();
+LiveSafe.getTipTypes();
 
 /**
  * Opens activity with history of your tips
  */
-LiveSafe.showTipHistory();
+LiveSafe.getTipHistory();
 
 /**
  * @param {Object} - tip
@@ -58,7 +70,7 @@ LiveSafe.submitTip(tip);
 /**
  * Opens activity for auth
  */
-LiveSafe.authentification();
+LiveSafe.authentication();
 
 /**
  * @return {Promise} with bool is user logged in
@@ -78,7 +90,7 @@ LiveSafe.callLocalEmergencyService(number);
 /**
  * Opens activity for messaging
  */
-LiveSafe.messageOrganzationSecurity();
+LiveSafe.messageOrganizationSecurity();
 ```
   
 ```
@@ -89,4 +101,16 @@ LiveSafe.messageOrganzationSecurity();
      *        mapIcon - Number
      *        hintText - String
      *        chatText - String
+```
+
+```
+// Tip Model
+     *        text - String - required
+     *        isAnonymous - Boolean
+     *        dateCreated - Date
+     *        longitude - Number
+     *        latitude - Number
+     *        tipType - Number
+     *        uuid - String
+
 ```
