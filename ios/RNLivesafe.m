@@ -270,14 +270,3 @@ RCT_EXPORT_METHOD(messageOrganizationSecurity){
 }
 
 @end
-
-
-/**
- 
- NEED DOCS
- 
- RCT_EXPORT_METHOD(showMap){
- config.googlePlacesKey = "YOUR_GOOGLE_PLACES_KEY"
- LSMapManager.initializeLivesafeMapWithLayers(withGoogleMapsKey: "AIzaSyA8NnyGPDj-TBi3hR_h_7y1AfhFvqoJQ3Y")
- 
- }**/
