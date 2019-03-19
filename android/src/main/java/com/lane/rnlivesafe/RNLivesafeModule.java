@@ -97,7 +97,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void getTips(Promise promise){
+    public void getTipTypes(Promise promise){
         LiveSafeSDK lssdk = LiveSafeSDK.getInstance();
         Organization o = lssdk.getOrganization();
         List<TipType> tt = o.getTipTypes();
@@ -117,7 +117,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void showTipHistory(){
+    public void getTipHistory(){
         Activity currentActivity = getCurrentActivity();
         Intent intent = TipHistoryActivity.createIntent(this.reactContext);
         currentActivity.startActivity(intent);
@@ -138,7 +138,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                 tipTypeObject.getInt("value"),
                 tipTypeObject.getString("name"),
                 tipTypeObject.hasKey("icon") ? tipTypeObject.getString("icon") : "",
-                tipTypeObject.hasKey("mapIcon") ?tipTypeObject.getString("mapICon"): "",
+                tipTypeObject.hasKey("mapIcon") ? tipTypeObject.getString("mapICon"): "",
                 tipTypeObject.hasKey("hintText") ? tipTypeObject.getString("hintText") : "",
                 tipTypeObject.hasKey("chatText") ? tipTypeObject.getString("chatText") : ""
         );
@@ -148,7 +148,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void authentification(){
+    public void authentication(){
         Activity currentActivity = getCurrentActivity();
         Intent intent = RegisterUserActivity.createIntent(this.reactContext);
         currentActivity.startActivityForResult(intent, LS_LOGIN_ACTIVITY);
@@ -209,7 +209,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void messageOrganzationSecurity(){
+    public void messageOrganizationSecurity(){
         Activity currentActivity = getCurrentActivity();
         Intent intent = ReportTipActivity.createEmergencyMessageIntent(this.reactContext, "users_location_will_be_shared");
         currentActivity.startActivityForResult(intent, LS_MESSAGE_ORGANIZATION_SECURITY);

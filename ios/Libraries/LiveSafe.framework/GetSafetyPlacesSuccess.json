@@ -1,0 +1,185 @@
+{
+  "html_attributions" : [],
+  "results" : [
+               {
+               "geometry" : {
+               "location" : {
+               "lat" : 38.8931107,
+               "lng" : -77.0799356
+               },
+               "viewport" : {
+               "northeast" : {
+               "lat" : 38.89346085,
+               "lng" : -77.07983284999999
+               },
+               "southwest" : {
+               "lat" : 38.89296345000001,
+               "lng" : -77.08024384999999
+               }
+               }
+               },
+               "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png",
+               "id" : "9fae875c9295bd9c239f437b89e8b7f7383008de",
+               "name" : "Exxon",
+               "opening_hours" : {
+               "open_now" : true,
+               "weekday_text" : []
+               },
+               "place_id" : "ChIJufJwfmC2t4kRCvWvSzfswH4",
+               "rating" : 2.7,
+               "reference" : "CmRYAAAAvp05DCMyA2SJKxheg1nmcMFoaBgF3PoDdkkBwrvEGUF8zuVGgSF31pO_ozQ7ijEM1JSEPWyqyqxN80ObWrMjOuc7e-nNjLeZTmlIv7YY8br6-sC7DS_KIkWmVAtrJMjEEhBpW1gycKdPuy6JJBUInmZIGhQ1zyfUICj2qDUvu_9hrWpEgY5Hvw",
+               "scope" : "GOOGLE",
+               "types" : [ "gas_station", "point_of_interest", "establishment" ],
+               "vicinity" : "1824 Wilson Boulevard, Arlington"
+               },
+               {
+               "geometry" : {
+               "location" : {
+               "lat" : 38.893015,
+               "lng" : -77.0726217
+               },
+               "viewport" : {
+               "northeast" : {
+               "lat" : 38.89339270000001,
+               "lng" : -77.0714847
+               },
+               "southwest" : {
+               "lat" : 38.8928891,
+               "lng" : -77.07300069999999
+               }
+               }
+               },
+               "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+               "id" : "076b1561271c0f24e7855056e340e652a067d1f4",
+               "name" : "Partnership Supply Chain Mgt",
+               "place_id" : "ChIJ5f2wPFm2t4kRaB-pREJFpIw",
+               "reference" : "CnRwAAAA0hQk2MPq4Os6pfWMDIFnw36IX_juKsIalOEVbmOYHMW_rqf5dTnfUHIoKrthGlyUOAkRqF5vJCmBhcM_qWBcIC_GA1gL9bI6C-Thr2Mdb8R334A_7WmZ40dcee-zDHMvGFjzJ2mLulGy-pszq-TSpxIQWObprRlLWHTBWwDxgsz5gBoUT3DxDy3c6nw2dWg8HhWhHP5aYR0",
+               "scope" : "GOOGLE",
+               "types" : [ "hospital", "point_of_interest", "establishment" ],
+               "vicinity" : "1616 North Fort Myer Drive, Arlington"
+               },
+               {
+               "geometry" : {
+               "location" : {
+               "lat" : 38.89634239999999,
+               "lng" : -77.0727103
+               },
+               "viewport" : {
+               "northeast" : {
+               "lat" : 38.8963736,
+               "lng" : -77.07267449999999
+               },
+               "southwest" : {
+               "lat" : 38.896332,
+               "lng" : -77.07281769999999
+               }
+               }
+               },
+               "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png",
+               "id" : "25695c3929eadc7d57d9c9699c662b72133d13dc",
+               "name" : "Sunoco Gas Station",
+               "photos" : [
+                           {
+                           "height" : 2368,
+                           "html_attributions" : [
+                                                  "\u003ca href=\"https://maps.google.com/maps/contrib/105253408714268812615/photos\"\u003eSaeed Abbassi\u003c/a\u003e"
+                                                  ],
+                           "photo_reference" : "CoQBcwAAAA6tyRDFVTbgi18C-euYG-nbyv79lp9QZVONOflLdM4yRJx_5nb_hD-DLVcSOTGDtU-Xp461ghDr6HClHEBoIBA4bEQTNyVb4e_Oi6bnFvqX0Ax9dXKZmlqY3SJ4R9O2Yre5fzlIF5d2ccgU1AmTO0QdvVrDEpGuHtWA4X_wQoLCEhBrnqEuGJGcGxpRB9ycjmOsGhTN-UBgU5jCjzR_9VyKjR-3Li2Hqw",
+                           "width" : 3200
+                           }
+                           ],
+               "place_id" : "ChIJmwdCl1u2t4kRn4Fq9Esob4o",
+               "price_level" : 2,
+               "reference" : "CnRmAAAA0GdoqRu9JJczInwKZwrOzZWe_dHJvOSjMXZhampJN7VqnMdjjZ6DFof4O9K_4ZxKRwjwhOi-ZndHSnkGlgmH5rvooSmkWgZtGFiEBBFOy_hDbBa58xIhrqBpcgpdu2u7ZG6qamTO9tlsJ1YHM5-SRxIQAp14a6dpvPy0MOSGQD8lcRoU-8b97KJxVJ6abql-re0nyrYwIrU",
+               "scope" : "GOOGLE",
+               "types" : [
+                          "gas_station",
+                          "convenience_store",
+                          "food",
+                          "store",
+                          "point_of_interest",
+                          "establishment"
+                          ],
+               "vicinity" : "1830 Fort Myer Drive, Arlington"
+               },
+               {
+               "geometry" : {
+               "location" : {
+               "lat" : 38.894644,
+               "lng" : -77.07665
+               },
+               "viewport" : {
+               "northeast" : {
+               "lat" : 38.89475405,
+               "lng" : -77.07641719999999
+               },
+               "southwest" : {
+               "lat" : 38.89431385000001,
+               "lng" : -77.07672760000001
+               }
+               }
+               },
+               "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "17e8ddd79b7b56a3edd562432270b385f4036ae9",
+               "name" : "Arlington County Fire Station 10",
+               "place_id" : "ChIJQ1Xzh162t4kRSK7DZBjAkoo",
+               "reference" : "CoQBdAAAABxZ74YQ4qpCWRlsFvfAgPl0Swkj2EQxVSLCsbFS_qwduS1N_8P69chWC8WFBS6yEBL2Rta3lfHepq6WeJedcjwgNAsqP3bzlXUCE3a0qHmuskl1vv5zRqmJlQ69nQW-8UIX0u-2ExKpPS8vFhjezD-IJZnNgR8UOvezCQC6ozpgEhAhIs2WoeoPTlz7t-hqNeFSGhRpbb6lvB-tUeiw8SJQnssNhw8U5w",
+               "scope" : "GOOGLE",
+               "types" : [ "fire_station", "point_of_interest", "establishment" ],
+               "vicinity" : "1559 Wilson Boulevard, Arlington"
+               },
+               {
+               "geometry" : {
+               "location" : {
+               "lat" : 38.8940401,
+               "lng" : -77.0691623
+               },
+               "viewport" : {
+               "northeast" : {
+               "lat" : 38.89450840000001,
+               "lng" : -77.06877094999999
+               },
+               "southwest" : {
+               "lat" : 38.893884,
+               "lng" : -77.06929275
+               }
+               }
+               },
+               "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+               "id" : "21610600b8b8bd3058121da80386de277a22ed75",
+               "name" : "New Century US",
+               "place_id" : "ChIJDQdD8lm2t4kR1Dm25ALAhHI",
+               "reference" : "CnRhAAAAuh-JjAaKPyofHKtwqtzfUHX6BeqX7SKReESv7r2mbhM5YHD99LJnOB5lHcGyh86CHO1p9y5lb_xmPQfu_7vjz2W0pc9A3QelHv487ttJyI_r8DrAmP69ga861CPIsZAAQey_Qb2u6u84iL0U3dBqxBIQqI3_MiTM9gZi1evigJK1ERoUJN5tXzx7YOVp7DUKDS2BCTWcvCA",
+               "scope" : "GOOGLE",
+               "types" : [ "police", "point_of_interest", "establishment" ],
+               "vicinity" : "1000 Wilson Boulevard #2520, Arlington"
+               },
+               {
+               "geometry" : {
+               "location" : {
+               "lat" : 38.8961271,
+               "lng" : -77.0730289
+               },
+               "viewport" : {
+               "northeast" : {
+               "lat" : 38.89614619999999,
+               "lng" : -77.07298195000001
+               },
+               "southwest" : {
+               "lat" : 38.89611900000001,
+               "lng" : -77.07313974999998
+               }
+               }
+               },
+               "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png",
+               "id" : "4aa46053c7db7583861ee383f2bdb416dfb1c967",
+               "name" : "NEC",
+               "place_id" : "ChIJz4F78lu2t4kRLFRB53duVHY",
+               "reference" : "CmRWAAAAePkfMetSghXk4b5bsIAi8EdJhgsdrZH9nCaRNCzcCN889_k6tfzYuIBApk-CL14yz9h6Kup3XX4_iy4eQt3H1lEme9tdU0CRrRPIPXO43zSzDFvTZaLsG2MpKVHqSIM1EhB2OmxITNvJQaaOvpMdNvrvGhSRrRdIBF2g1aOVAz7HbzB0Xb37YA",
+               "scope" : "GOOGLE",
+               "types" : [ "gas_station", "point_of_interest", "establishment" ],
+               "vicinity" : "1816 North Nash Street, Arlington"
+               }
+               ],
+  "status" : "OK"
+}

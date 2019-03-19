@@ -1,0 +1,29 @@
+{
+  "anonymous" : true,
+  "uuid" : "0056C2DD-5045-4216-8E88-D2E374675287",
+  "step" : 0,
+  "description" : "Test tip response",
+  "orgId" : 19,
+  "tipType" : {
+    "displayName" : "Other",
+    "eventTypeId" : 1
+  },
+  "eventId": 10,
+  "status" : 0,
+  "dateCreated": 1462314005,
+  "media":
+  [
+   {
+   "mediaId" : 10,
+   "contentType" : "image/jpeg",
+   "dateCreated": 1462314005,
+   "name": "file1.jpeg"
+   },
+   {
+   "mediaId" : 11,
+   "contentType" : "image/jpeg",
+   "dateCreated": 1462314005,
+   "name": "file2.jpeg"
+   }
+   ]
+}

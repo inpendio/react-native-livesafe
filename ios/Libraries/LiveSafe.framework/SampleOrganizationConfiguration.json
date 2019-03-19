@@ -1,0 +1,7 @@
+{
+  "chatText": "Chat with safety officials",
+  "isAnonymousDisabled": false,
+  "callEnabledInSw": false,
+  "tags": "LiveSafe|ls",
+  "addEventResponseMessage": "Based upon your location, your tip has been submitted to SSOAuthLeaf3.  They will be in touch with you should they require any further information."
+}

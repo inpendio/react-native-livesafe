@@ -1,0 +1,33 @@
+[
+               {
+               "userId": 1,
+               "senderUserName": "Nick",
+               "messageId": 1,
+               "text": "Here is a chat",
+               "dateCreated": 1462314005
+               }, {
+               "userId": 2,
+               "senderUserName": "Demetris",
+               "messageId": 2,
+               "text": "and a response",
+               "dateCreated": 1462314105
+               }, {
+               "userId": 1,
+               "senderUserName": "Nick",
+               "messageId": 3,
+               "text": "wait there's more",
+               "dateCreated": 1462314205
+               }, {
+               "userId": 2,
+               "senderUserName": "Demetris",
+               "messageId": 4,
+               "text": "Another response",
+               "dateCreated": 1462314505
+               }, {
+               "userId": 1,
+               "senderUserName": "Nick",
+               "messageId": 5,
+               "text": "Done testing.",
+               "dateCreated": 1462314805
+               }
+]

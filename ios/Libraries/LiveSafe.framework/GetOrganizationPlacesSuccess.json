@@ -1,0 +1,19 @@
+{
+  "places":
+  [
+   {
+     "placeId":10,
+     "type":4,
+     "name": "Org building 1",
+     "address": "1400 Key Blvd, Arlington VA",
+     "description":"This is building 1",
+     "description": "Test Org",
+     "dateCreated":1465896649,
+     "organizationName": "LiveSafe's & Test",
+     "center": {
+       "longitude": 38.8961814,
+       "latitude": -77.0737373
+     }
+   }
+  ]
+}

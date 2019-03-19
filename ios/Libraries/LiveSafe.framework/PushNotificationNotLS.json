@@ -1,0 +1,16 @@
+{
+  "aps" : {
+    "alert": "test notification",
+    "badge": 1,
+    "sound": "default"
+  },
+  "dc": "2016-06-02 15:45:39",
+  "ecid": 57960,
+  "edatecreated": 1464882339,
+  "eid": 24592,
+  "etid": 21,
+  "nid": 123535,
+  "notid": 567,
+  "tipid": 123,
+  "ntid": 1020,
+}
