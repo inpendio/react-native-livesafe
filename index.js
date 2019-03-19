@@ -13,6 +13,7 @@ class RNLiveSafe extends NativeEventEmitter {
     this.isLoggedIn = nativeModule.isLoggedIn;// ios (dont know if we need this, was following the readme)
     this.updateUserLocation = nativeModule.updateUserLocation; //android & ios
     this.updateDeviceToken = nativeModule.updateDeviceToken //ios
+    this.registerForNotifications = nativeModule.registerForNotifications //ios
     this.emergencyOptions = nativeModule.emergencyOptions; //android & ios
     this.messageOrganizationSecurity = nativeModule.messageOrganizationSecurity; //android
     this.callLocalEmergencyService = nativeModule.callLocalEmergencyService; //android & ios

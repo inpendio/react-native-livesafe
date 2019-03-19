@@ -42,6 +42,11 @@ RCT_EXPORT_METHOD(updateDeviceToken: (NSData* ) token)
 }
 
 
+RCT_EXPORT_METHOD(registerForNotifications){
+    [LSManager registerNotificationSettings];
+}
+
+
 // Opens LiveSafe's UI to submit new Tip. type param most be one of the TipTypes LiveSafe Provides. (getTipTypes)
 RCT_EXPORT_METHOD(submitTip: (NSDictionary* ) type){
     LSTipType *tipType = [[LSTipType alloc] initWithTypeId: (int)[type objectForKey:@"name"]];
