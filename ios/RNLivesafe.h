@@ -9,9 +9,10 @@
 
 #import <LiveSafe/LiveSafe.h>
 
+#import "../../../lane-next/lane-mobile/ios/lane/AppDelegate.h";
+
 
 @interface RNLivesafe : NSObject <RCTBridgeModule>
-
 @end
 
 @interface ObjCall : NSObject <EmergencyCall>

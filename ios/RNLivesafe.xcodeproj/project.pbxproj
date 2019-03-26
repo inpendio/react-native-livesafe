@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		733C4EE72242E99F00C6D24E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733C4EE62242E99F00C6D24E /* Alamofire.framework */; };
-		733C4EE92242E9AA00C6D24E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733C4EE82242E9AA00C6D24E /* SwiftyJSON.framework */; };
-		733C4EEB2242E9B100C6D24E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733C4EEA2242E9B100C6D24E /* ObjectMapper.framework */; };
 		738D025E2242B007008F9F75 /* Billboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7343CBBB223961BF00CC3C97 /* Billboard.framework */; };
 		738D025F2242B007008F9F75 /* LiveSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7343CBBC223961BF00CC3C97 /* LiveSafe.framework */; };
 		738D02602242B007008F9F75 /* LiveSafeUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7343CBBD223961BF00CC3C97 /* LiveSafeUtils.framework */; };
@@ -56,9 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733C4EEB2242E9B100C6D24E /* ObjectMapper.framework in Frameworks */,
-				733C4EE92242E9AA00C6D24E /* SwiftyJSON.framework in Frameworks */,
-				733C4EE72242E99F00C6D24E /* Alamofire.framework in Frameworks */,
 				738D025E2242B007008F9F75 /* Billboard.framework in Frameworks */,
 				738D025F2242B007008F9F75 /* LiveSafe.framework in Frameworks */,
 				738D02602242B007008F9F75 /* LiveSafeUtils.framework in Frameworks */,

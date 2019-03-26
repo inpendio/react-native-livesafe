@@ -45,6 +45,75 @@
 
 7. In your Target's Build Phases add the libRNLiveSafe.a under Link Binary with Libraries
 
+##### AppDelegate Config
+
+You'll need to change your AppDelegate to make sure LiveSafe's sdk custom screens can be pushed to your App's UINavigatorViewController.
+
+To start you'll need to change your `window.rootViewController` to be a `UINavigatorViewController` instead of a `UIViewController`. Doing this will make your application show a native navigation bar, to hide this you'll need to create a custom `UIViewController` class that hides it automatically.
+
+###### AppDelegate.h
+```
+//AppDelegate.h
+
+@interface CustomViewController : UIViewController
+- (void) viewDidAppear:(BOOL)animated;
+@end
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) CustomViewController *rootViewController;
+
+@end
+
+```
+###### AppDelegate.m
+```
+#import "AppDelegate.h"
+
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
+#import <Firebase.h>
+
+@implementation CustomViewController
+
+- (void) viewWillAppear:(BOOL)animated {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    ((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
+}
+
+@end
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  NSURL *jsCodeLocation;
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"YOUR_APP_MODULE_NAME"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
+  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  CustomViewController *rootViewController = [CustomViewController new];
+  rootViewController.view = rootView;
+  UINavigationController * navController = [[UINavigationController alloc]  initWithRootViewController:rootViewController];
+  [navController setDelegate:self];
+  self.window.rootViewController = navController;
+  self.rootViewController = navController;
+  [self.window makeKeyAndVisible];
+  return YES;
+}
+
+@end
+
+```
+
+Lastly, make sure you to import your `AppDelegate.h` in the `RNLiveSafe` Project's header file.
+
 #### Android
 
 Add to your project build.gradle file:
