@@ -165,7 +165,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void isLoggedin(Promise promise){
+    public void isLoggedIn(Promise promise){
         promise.resolve(new Boolean(LiveSafeSDK.getInstance().isUserRegistered()));
     }
 
