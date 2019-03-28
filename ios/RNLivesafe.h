@@ -9,9 +9,10 @@
 
 #import <LiveSafe/LiveSafe.h>
 
+#import "IMPORT_APP_DELEGATE_HERE";
+
 
 @interface RNLivesafe : NSObject <RCTBridgeModule>
-
 @end
 
 @interface ObjCall : NSObject <EmergencyCall>

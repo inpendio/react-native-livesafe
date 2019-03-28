@@ -46,39 +46,47 @@ RCT_EXPORT_METHOD(registerForNotifications){
     [LSManager registerNotificationSettings];
 }
 
-
 // Opens LiveSafe's UI to submit new Tip. type param most be one of the TipTypes LiveSafe Provides. (getTipTypes)
 RCT_EXPORT_METHOD(submitTip: (NSDictionary* ) type){
     LSTipType *tipType = [[LSTipType alloc] initWithTypeId: (int)[type objectForKey:@"name"]];
     LSReportTipConfig *reportTipConfig = [[LSReportTipConfig alloc] initWithTipType:tipType];
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    // Saving ummutable copy of Initial VC
-    UIViewController *const MainViewController =  [UIApplication sharedApplication].delegate.window.rootViewController;
-    
-    // Getting LiveSafe NC
-    UINavigationController* lsNav = [LSTipSubmitManager
-                                     startReportTip: reportTipConfig
-                                     completion:^(LSTip *tip, LSError *error) {
-                                         // When this is called the LiveSafe SDK submitted the SDK.
-                                         if (error == nil)
-                                         {
-                                         }
-                                         else
-                                         {
+    UINavigationController* startTipNC = [LSTipSubmitManager
+                                      startReportTip: reportTipConfig
+                                      completion:^(LSTip *tip, LSError *error) {
+                                          // When this is called the LiveSafe SDK submitted the SDK.
+                                          if (error == nil)
+                                          {
                                              
-                                             NSLog(@"Error reporting tip");
-                                         }
-                                         // Going back to Initial VC once tip is succesfully reported
-                                         [UIApplication sharedApplication].delegate.window.rootViewController = MainViewController;
-                                     }];
-    
-    // Forcing LiveSafe's UC in root
-    [UIApplication sharedApplication].delegate.window.rootViewController = lsNav;
+                                          }
+                                          else
+                                          {
+                                              NSLog(@"Error reporting tip");
+                                          }
+                                          
+                                          [(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+                                      }];
+
+    ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
+    [(UINavigationController*)delegate.rootViewController pushViewController: startTipNC.childViewControllers[0] animated:YES];
     
 }
 
-// Util function to transfrom LSTipType to NSDictionary
--(NSDictionary*)normalizeTipType:(LSTipType*)tip{
+RCT_EXPORT_METHOD(startChatForTip: (NSDictionary*) tipDictionary){
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    LSTip * tip = [self DictionaryToLSTip:tipDictionary];
+    
+    UINavigationController* chatNC = [LSChatManager startChatForTip:tip error:nil];
+    
+    ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
+    [(UINavigationController*)delegate.rootViewController pushViewController: chatNC.childViewControllers[0] animated:YES];
+    
+}
+
+
+// Util function to transform LSTipType to NSDictionary
+-(NSDictionary*)LSTipTypeToDictionary:(LSTipType*)tip{
     NSDictionary* tipNormalized =  @{
                                      @"value": @(tip.tipTypeId),
                                      @"name": tip.displayName,
@@ -89,31 +97,8 @@ RCT_EXPORT_METHOD(submitTip: (NSDictionary* ) type){
     return tipNormalized;
 }
 
-// Returns a promise with the array of TipTypes objects defined above
-RCT_REMAP_METHOD(getTipTypes,
-                 getTipTypesWithResolver:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
-{
-    [LSTipSubmitManager
-     getTipTypes:^(NSArray<LSTipType *> *tipTypes, LSError *error) {
-         if (tipTypes)
-         {
-             NSMutableArray* tipsNormalized = [NSMutableArray array];
-             for (LSTipType* tip in tipTypes) {
-                 [tipsNormalized addObject: [self normalizeTipType:tip]];
-             }
-             
-             resolve(tipsNormalized);
-         }
-         else
-         {
-             reject(@"Error @getTypes", @"couldn't retrieve type types", (NSError* ) error);
-         }
-     }];
-}
-
 // Util function to transfrom LSTip to NSDictionary
--(NSDictionary*)normalizeTip:(LSTip*)tip{
+-(NSDictionary*)LSTipToDictionary:(LSTip*)tip{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"d MM yyyy"];
     NSDictionary* tipNormalized =  @{
@@ -128,6 +113,38 @@ RCT_REMAP_METHOD(getTipTypes,
     return tipNormalized;
 }
 
+// Util function to transfrom LSTip to NSDictionary
+-(LSTip*)DictionaryToLSTip:(NSDictionary*)tip{
+    LSTip* tipReturn = [LSTip retrieveStoredTip:tip[@"uuid"] error:nil];
+    return tipReturn;
+}
+
+
+
+
+// Returns a promise with the array of TipTypes objects defined above
+RCT_REMAP_METHOD(getTipTypes,
+                 getTipTypesWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [LSTipSubmitManager
+     getTipTypes:^(NSArray<LSTipType *> *tipTypes, LSError *error) {
+         if (tipTypes)
+         {
+             NSMutableArray* tipsNormalized = [NSMutableArray array];
+             for (LSTipType* tip in tipTypes) {
+                 [tipsNormalized addObject: [self LSTipTypeToDictionary:tip]];
+             }
+             
+             resolve(tipsNormalized);
+         }
+         else
+         {
+             reject(@"Error @getTypes", @"couldn't retrieve type types", (NSError* ) error);
+         }
+     }];
+}
+
 // Gets User's tip history and returns a promise with array of Tip objects
 RCT_REMAP_METHOD(getTipHistory,
                  getTipHistoryWithResolver:(RCTPromiseResolveBlock)resolve
@@ -138,7 +155,7 @@ RCT_REMAP_METHOD(getTipHistory,
         {
             NSMutableArray* tipsNormalized = [NSMutableArray array];
             for (LSTip* tip in Tips) {
-                [tipsNormalized addObject: [self normalizeTip:tip]];
+                [tipsNormalized addObject: [self LSTipToDictionary:tip]];
             }
             resolve(tipsNormalized);
         }
@@ -148,10 +165,15 @@ RCT_REMAP_METHOD(getTipHistory,
     }];
 }
 
+RCT_EXPORT_METHOD(showTipHistory) {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
+    [LSTipSubmitManager showUserActivityUsing:(UINavigationController*)delegate.rootViewController];
+}
+
 // Checks if user is authenticated. If user is not, it will open UI to authenticate the user using phone number
 RCT_EXPORT_METHOD(authentication){
-    // Saving ummutable copy of Initial VC
-    UIViewController *const MainViewController =  [UIApplication sharedApplication].delegate.window.rootViewController;
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     if ([LSManager isAuthorized]) {
         NSLog(@"User is already authorized");
@@ -167,12 +189,14 @@ RCT_EXPORT_METHOD(authentication){
             }
             
             // Going back to Initial VC once tip is succesfully reported
-            [UIApplication sharedApplication].delegate.window.rootViewController = MainViewController;
+            ((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
+            [(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
         }
                                          ];
         
         // Forcing LiveSafe's UC in root
-        [UIApplication sharedApplication].delegate.window.rootViewController = lsNav;
+        ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
+        [(UINavigationController*)delegate.rootViewController pushViewController: lsNav.childViewControllers[0] animated:YES];
     }
 }
 
@@ -254,8 +278,8 @@ RCT_EXPORT_METHOD(callLocalEmergencyService: (double) latitude :(double) longitu
 
 // Opens UI that sends Emergency message to organization security
 RCT_EXPORT_METHOD(messageOrganizationSecurity){
-    
-    UIViewController *const MainViewController =  [UIApplication sharedApplication].delegate.window.rootViewController;
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //UIViewController *const MainViewController =  [UIApplication sharedApplication].delegate.window.rootViewController;
     
     ObjMessage *msgItem = [[ObjMessage alloc] init];
     msgItem.title = @"Message Organization Security";
@@ -268,10 +292,13 @@ RCT_EXPORT_METHOD(messageOrganizationSecurity){
            }
         
             // Going back to Initial VC once tip is succesfully reported
-            [UIApplication sharedApplication].delegate.window.rootViewController = MainViewController;
+            ((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
+            [(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+
         }];
     
-    [UIApplication sharedApplication].delegate.window.rootViewController = lsNav;
+    ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
+    [(UINavigationController*)delegate.rootViewController pushViewController: lsNav.childViewControllers[0] animated:YES];
 }
 
 @end
