@@ -148,10 +148,12 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void authentication(){
+    public void authentication(Promise promise){
         Activity currentActivity = getCurrentActivity();
         Intent intent = RegisterUserActivity.createIntent(this.reactContext);
         currentActivity.startActivityForResult(intent, LS_LOGIN_ACTIVITY);
+        // FIXME: make sure this returns true/false if auth is invalid
+        promise.resolve(true);
     }
 
     @ReactMethod
@@ -213,6 +215,13 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
         Activity currentActivity = getCurrentActivity();
         Intent intent = ReportTipActivity.createEmergencyMessageIntent(this.reactContext, "users_location_will_be_shared");
         currentActivity.startActivityForResult(intent, LS_MESSAGE_ORGANIZATION_SECURITY);
+    }
+
+    @ReactMethod
+    public void switchOrganization(Number orgId, final Promise promise){
+      LiveSafeSDK.getInstance().setOrganization(futureOrgID, organization -> {
+          promise.resolve(true)
+      },
     }
 
 }
