@@ -19,6 +19,7 @@ class RNLiveSafe extends NativeEventEmitter {
     this.callLocalEmergencyService = nativeModule.callLocalEmergencyService; //android & ios
     this.callOrganizationSecurity = nativeModule.callOrganizationSecurity; //android & ios
     this.showTipHistory = nativeModule.showTipHistory; // ios
+    this.switchOrganization = nativeModule.switchOrganization; // ios & android
   }
 }
 
