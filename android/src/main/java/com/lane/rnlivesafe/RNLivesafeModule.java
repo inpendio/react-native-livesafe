@@ -138,7 +138,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                 tipTypeObject.getInt("value"),
                 tipTypeObject.getString("name"),
                 tipTypeObject.hasKey("icon") ? tipTypeObject.getString("icon") : "",
-                tipTypeObject.hasKey("mapIcon") ? tipTypeObject.getString("mapICon"): "",
+                tipTypeObject.hasKey("mapIcon") ? tipTypeObject.getString("mapIcon"): "",
                 tipTypeObject.hasKey("hintText") ? tipTypeObject.getString("hintText") : "",
                 tipTypeObject.hasKey("chatText") ? tipTypeObject.getString("chatText") : ""
         );
@@ -167,7 +167,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void isLoggedin(Promise promise){
+    public void isLoggedIn(Promise promise){
         promise.resolve(new Boolean(LiveSafeSDK.getInstance().isUserRegistered()));
     }
 
