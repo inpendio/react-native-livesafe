@@ -301,4 +301,22 @@ RCT_EXPORT_METHOD(messageOrganizationSecurity){
     [(UINavigationController*)delegate.rootViewController pushViewController: lsNav.childViewControllers[0] animated:YES];
 }
 
+RCT_REMAP_METHOD(switchOrganization,
+                 orgId: (NSInteger*) orgId
+                 switchOrganizationWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [LSManager setOrganization: orgId
+                    completion:^(LSError *error) {
+                        if (error != nil)
+                        {
+                            resolve(@YES);
+                        }
+                        else
+                        {
+                            resolve(@NO);
+                        }
+                    }];
+}
+
 @end
