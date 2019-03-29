@@ -33,6 +33,7 @@ RCT_EXPORT_METHOD(init:(NSString *)clientKey secretKey:(NSString *)secretKey)
                                    NSLog(@"LiveSafe SDK init failed");
                                }
                            }];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 // Updates User Token
