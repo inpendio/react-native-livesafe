@@ -181,7 +181,11 @@ RCT_EXPORT_METHOD(showTipHistory) {
 }
 
 // Checks if user is authenticated. If user is not, it will open UI to authenticate the user using phone number
-RCT_EXPORT_METHOD(authentication){
+RCT_REMAP_METHOD(authentication,
+                 authenticationWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject
+)
+{
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     if ([LSManager isAuthorized]) {
@@ -190,24 +194,26 @@ RCT_EXPORT_METHOD(authentication){
     else {
         UINavigationController* lsNav = [LSManager authorizeIfNeededWithCompletion:^(LSError * error) {
             if (error == nil) {
-                NSLog(@"ERROR is nill");
+               resolve(@YES);
             }
             else {
-                NSLog(@"ERROR:is not NILL %@",
-                      error.description);
+                resolve(@NO);
             }
             
             // Going back to Initial VC once tip is succesfully reported
-            ((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
-            [(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+            //((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
+            //[(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+            [(UINavigationController*) delegate.rootViewController popToRootViewControllerAnimated:YES];
         }
-                                         ];
+    ];
         
         // Forcing LiveSafe's UC in root
         ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
         [(UINavigationController*)delegate.rootViewController pushViewController: lsNav.childViewControllers[0] animated:YES];
     }
 }
+
+
 
 // Returns boolean indicating if user is logged in
 RCT_REMAP_METHOD(isLoggedIn,
