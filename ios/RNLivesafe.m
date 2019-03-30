@@ -49,7 +49,7 @@ RCT_EXPORT_METHOD(registerForNotifications){
 
 // Opens LiveSafe's UI to submit new Tip. type param most be one of the TipTypes LiveSafe Provides. (getTipTypes)
 RCT_EXPORT_METHOD(submitTip: (NSDictionary* ) type){
-    LSTipType *tipType = [[LSTipType alloc] initWithTypeId: (int)[type objectForKey:@"name"]];
+    LSTipType *tipType = [[LSTipType alloc] initWithTypeId: (int)[type objectForKey:@"value"]];
     LSReportTipConfig *reportTipConfig = [[LSReportTipConfig alloc] initWithTipType:tipType];
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
