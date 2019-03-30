@@ -320,14 +320,31 @@ RCT_EXPORT_METHOD(endSession) {
     [LSManager endSession];
 }
 
+// Returns boolean indicating if user is logged in
+RCT_REMAP_METHOD(getOrganization,
+                 orgId:(NSInteger) orgId
+                 getOrganizationWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [LSManager getOrganizationDetails:orgId completion:^(LSOrganization *org, LSError *error) {
+       if (error != nil)
+       {
+           //Incompatible block pointer types sending 'void (^)(LSError *__strong)' to parameter of type 'void (^ _Nonnull)(LSOrganization * _Nullable __strong, LSError * _Nullable __strong)'
+           reject(@"getOrganization error", @"Could not get OrgID", (NSError* ) error);
+       }
+       else
+       {
+           resolve(org.name);
+       }
+    }];
+}
+
 RCT_REMAP_METHOD(setOrganization,
-                 orgId: (NSInteger*) orgId
+                 orgId: (NSInteger) orgId
                  sethOrganizationWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-    [LSManager setOrganization: *orgId
-                    completion:^(LSError *error) {
-
+    [LSManager setOrganization: orgId completion:^(LSError *error) {
         if (error != nil)
         {
             reject(@"setOrganization error", @"Could not set OrgID", (NSError* ) error);
