@@ -1,15 +1,10 @@
-def authToken = "jp_7r2h0091kig91cs1dlbrqg4l5k"
+def authToken = INSERT_JITPACK_AUTH_HERE
 
 buildscript {
     repositories {
         jcenter()
         maven { url "https://maven.google.com" }
         google()
-        //maven { url "https://jitpack.io" }
-        /* maven {
-            url "https://jitpack.io"
-            credentials { username "jp_7r2h0091kig91cs1dlbrqg4l5k" }
-        } */
     }
 
     dependencies {
@@ -19,15 +14,13 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
-
-
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 22
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -38,27 +31,16 @@ android {
 
 repositories {
     mavenCentral()
-    //maven { url "https://maven.google.com" }
     google()
-    //maven { url "https://jitpack.io" }
-    /* maven {
-        url "https://jitpack.io"
-        name "jitpack"
-        credentials { username "jp_7r2h0091kig91cs1dlbrqg4l5k" }
-    } */
 }
 
 dependencies {
-    /* implementation (project('com.github.LiveSafe.mobile-android-sdk:livesafesdk:v4.0.+')) {
-        exclude group: 'com.android.support'
-        exclude group: 'com.google.android.gms'
-    } */
     compile ('com.github.LiveSafe.mobile-android-sdk:livesafesdk:+') {
         exclude group: 'com.android.support'
     }
     compile('com.github.LiveSafe.mobile-android-sdk:safetymap:+'){
             transitive = true
-        }
+    }
     implementation 'com.facebook.react:react-native:+'
 }
   

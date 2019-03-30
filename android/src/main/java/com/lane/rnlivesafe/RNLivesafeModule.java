@@ -74,14 +74,14 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                 new Result<Void>() {
                     @Override
                     public void call(Void aVoid) {
-                        Log.i(TAG, "Session success!!");
-                        promise.resolve(new String("Logged in"));
+                        Log.i(TAG, "Live safe init success");
+                        promise.resolve(true);
                     }
                 },
                 new Result<Throwable>() {
                     @Override
                     public void call(Throwable throwable) {
-                        Log.w(TAG, "Session fail!!");
+                        Log.w(TAG, "Live safe init failed");
                         promise.reject(throwable);
                     }
                 },
@@ -218,7 +218,8 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void switchOrganization(Double orgId){
+    public void switchOrganization(Double orgId, final Promise promise){
       LiveSafeSDK.getInstance().setOrganization(new Organization(orgId.intValue()));
+      promise.resolve(true);
     }
-}
+ }

@@ -17,7 +17,11 @@ RCT_EXPORT_MODULE()
     return dispatch_get_main_queue();
 }
 
-RCT_EXPORT_METHOD(init:(NSString *)clientKey secretKey:(NSString *)secretKey)
+RCT_REMAP_METHOD(init:(NSString *)clientKey
+                secretKey:(NSString *)secretKey
+                initWithResolver:(RCTPromiseResolveBlock)resolve
+                rejecter:(RCTPromiseRejectBlock)reject)
+                )
 {
     // Init LS Manager
     [LSManager initializeWithAccessKey:clientKey
@@ -30,10 +34,14 @@ RCT_EXPORT_METHOD(init:(NSString *)clientKey secretKey:(NSString *)secretKey)
                            completion:^(LSError *error) {
                                if (error != nil)
                                {
+                                   reject(@NO);
                                    NSLog(@"LiveSafe SDK init failed");
+                               } else
+                               {
+                                   resolve(@YES);
+                                   [[UIApplication sharedApplication] registerForRemoteNotifications];
                                }
                            }];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 // Updates User Token
@@ -315,7 +323,7 @@ RCT_REMAP_METHOD(switchOrganization,
                         }
                         else
                         {
-                            resolve(@NO);
+                            reject(@NO);
                         }
                     }];
 }
