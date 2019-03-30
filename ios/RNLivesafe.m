@@ -17,10 +17,10 @@ RCT_EXPORT_MODULE()
     return dispatch_get_main_queue();
 }
 
-RCT_REMAP_METHOD(init:(NSString *)clientKey
-                secretKey:(NSString *)secretKey
-                initWithResolver:(RCTPromiseResolveBlock)resolve
-                rejecter:(RCTPromiseRejectBlock)reject)
+RCT_REMAP_METHOD(init, :(NSString *)clientKey
+                 secretKey:(NSString *)secretKey
+                 initWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject
                 )
 {
     // Init LS Manager
@@ -34,7 +34,7 @@ RCT_REMAP_METHOD(init:(NSString *)clientKey
                            completion:^(LSError *error) {
                                if (error != nil)
                                {
-                                   reject(@NO);
+                                   reject(@"init error", @"Could not init", (NSError* ) error);
                                    NSLog(@"LiveSafe SDK init failed");
                                } else
                                {
@@ -60,37 +60,37 @@ RCT_EXPORT_METHOD(submitTip: (NSDictionary* ) type){
     LSTipType *tipType = [[LSTipType alloc] initWithTypeId: (int)[type objectForKey:@"value"]];
     LSReportTipConfig *reportTipConfig = [[LSReportTipConfig alloc] initWithTipType:tipType];
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
+
     UINavigationController* startTipNC = [LSTipSubmitManager
                                       startReportTip: reportTipConfig
                                       completion:^(LSTip *tip, LSError *error) {
                                           // When this is called the LiveSafe SDK submitted the SDK.
                                           if (error == nil)
                                           {
-                                             
+
                                           }
                                           else
                                           {
                                               NSLog(@"Error reporting tip");
                                           }
-                                          
+
                                           [(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
                                       }];
 
     ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
     [(UINavigationController*)delegate.rootViewController pushViewController: startTipNC.childViewControllers[0] animated:YES];
-    
+
 }
 
 RCT_EXPORT_METHOD(startChatForTip: (NSDictionary*) tipDictionary){
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     LSTip * tip = [self DictionaryToLSTip:tipDictionary];
-    
+
     UINavigationController* chatNC = [LSChatManager startChatForTip:tip error:nil];
-    
+
     ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
     [(UINavigationController*)delegate.rootViewController pushViewController: chatNC.childViewControllers[0] animated:YES];
-    
+
 }
 
 
@@ -144,7 +144,7 @@ RCT_REMAP_METHOD(getTipTypes,
              for (LSTipType* tip in tipTypes) {
                  [tipsNormalized addObject: [self LSTipTypeToDictionary:tip]];
              }
-             
+
              resolve(tipsNormalized);
          }
          else
@@ -184,29 +184,29 @@ RCT_EXPORT_METHOD(showTipHistory) {
 RCT_REMAP_METHOD(authentication,
                  authenticationWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject
-)
+                 )
 {
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
+
     if ([LSManager isAuthorized]) {
         NSLog(@"User is already authorized");
     }
     else {
         UINavigationController* lsNav = [LSManager authorizeIfNeededWithCompletion:^(LSError * error) {
             if (error == nil) {
-               resolve(@YES);
+                resolve(@YES);
             }
             else {
                 resolve(@NO);
             }
-            
+
             // Going back to Initial VC once tip is succesfully reported
             //((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
             //[(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
             [(UINavigationController*) delegate.rootViewController popToRootViewControllerAnimated:YES];
         }
-    ];
-        
+                                         ];
+
         // Forcing LiveSafe's UC in root
         ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
         [(UINavigationController*)delegate.rootViewController pushViewController: lsNav.childViewControllers[0] animated:YES];
@@ -252,7 +252,7 @@ RCT_EXPORT_METHOD(callOrganizationSecurity: (NSString* ) number :(double) latitu
     callItem.sendEvent = true;
     callItem.enableLocationTracking = true;
     callItem.tipTypeId = [TipTypeConstants kTipTypeIdCallOrganizationSecurity];
-    
+
     [LSEmergencyOptionsManager makeCallWithCallItem:callItem completion:^(LSTip *tip, LSError *error) {
         if (error != nil) {
             NSLog(@"ERROR: Failed to make emergency call, error is [%@]", error.description);
@@ -276,16 +276,16 @@ RCT_EXPORT_METHOD(callLocalEmergencyService: (double) latitude :(double) longitu
            callItem.sendEvent = YES;
            callItem.enableLocationTracking = YES;
            callItem.tipTypeId = [TipTypeConstants kTipTypeIdCallOrganizationSecurity];
-           
+
            [LSEmergencyOptionsManager makeCallWithCallItem:callItem completion:^(LSTip *tip, LSError *error) {
                if (error != nil) {
                    NSLog(@"ERROR: Failed to make emergency call, error is [%@]", error.description);
                }
-               
+
                if (tip == nil) {
                    NSLog(@"ERROR: Failed to send tip for emergency call");
                }
-               
+
            }];
        }];
 
@@ -295,7 +295,7 @@ RCT_EXPORT_METHOD(callLocalEmergencyService: (double) latitude :(double) longitu
 RCT_EXPORT_METHOD(messageOrganizationSecurity){
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     //UIViewController *const MainViewController =  [UIApplication sharedApplication].delegate.window.rootViewController;
-    
+
     ObjMessage *msgItem = [[ObjMessage alloc] init];
     msgItem.title = @"Message Organization Security";
     UINavigationController* lsNav = [LSEmergencyOptionsManager sendMessageWithMessageItem:msgItem
@@ -305,33 +305,38 @@ RCT_EXPORT_METHOD(messageOrganizationSecurity){
            } else {
                NSLog(@"ERROR: Failed to send message, error is [%@]", error.description);
            }
-        
+
             // Going back to Initial VC once tip is succesfully reported
             //((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
             [(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
 
         }];
-    
+
     ((UINavigationController*) delegate.rootViewController).navigationBarHidden = NO;
     [(UINavigationController*)delegate.rootViewController pushViewController: lsNav.childViewControllers[0] animated:YES];
 }
 
-RCT_REMAP_METHOD(switchOrganization,
+RCT_EXPORT_METHOD(endSession) {
+    [LSManager endSession];
+}
+
+RCT_REMAP_METHOD(setOrganization,
                  orgId: (NSInteger*) orgId
-                 switchOrganizationWithResolver:(RCTPromiseResolveBlock)resolve
+                 sethOrganizationWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-    [LSManager setOrganization: orgId
+    [LSManager setOrganization: *orgId
                     completion:^(LSError *error) {
-                        if (error != nil)
-                        {
-                            resolve(@YES);
-                        }
-                        else
-                        {
-                            reject(@NO);
-                        }
-                    }];
+
+        if (error != nil)
+        {
+            reject(@"setOrganization error", @"Could not set OrgID", (NSError* ) error);
+        }
+        else
+        {
+            resolve(@YES);
+        }
+    }];
 }
 
 @end
