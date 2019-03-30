@@ -242,19 +242,19 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void switchOrganization(Double orgId, final Promise promise){
-      LiveSafeSDK.getInstance().setOrganization(orgId.intValue(),
+    public void setOrganization(Integer orgId, final Promise promise){
+      LiveSafeSDK.getInstance().setOrganization(orgId,
               new Result<Integer>() {
                   @Override
                   public void call(Integer orgId) {
-                      Log.i(TAG, "set OrgID success");
+                      Log.i(TAG, "setOrganization success");
                       promise.resolve(orgId);
                   }
               },
               new Result<Throwable>() {
                   @Override
                   public void call(Throwable throwable) {
-                      Log.w(TAG, "set OrgID failed");
+                      Log.w(TAG, "setOrganization failed");
                       promise.reject(throwable);
                   }
               });
