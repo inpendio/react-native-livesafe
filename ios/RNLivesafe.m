@@ -190,8 +190,9 @@ RCT_EXPORT_METHOD(authentication){
             }
             
             // Going back to Initial VC once tip is succesfully reported
-            ((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
-            [(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+            //((UINavigationController*) delegate.rootViewController).navigationBarHidden = YES;
+            //[(UINavigationController*) delegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+            [(UINavigationController*) delegate.rootViewController popToRootViewControllerAnimated:YES];
         }
                                          ];
         
