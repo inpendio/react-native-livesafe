@@ -68,7 +68,11 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void init(String key, String secret, final Promise promise) {
+    public void init(String key, String secret, String fcmToken, final Promise promise) {
+        Log.i(TAG, "livesafe init");
+        Log.i(TAG, key);
+        Log.i(TAG, secret);
+        Log.i(TAG, fcmToken);
         LiveSafeSDK.create(this.reactContext, new LiveSafeAuth(key, secret));
         LiveSafeSDK.getInstance().startSession(
                 new Result<Void>() {
@@ -85,7 +89,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                         promise.reject(throwable);
                     }
                 },
-                null
+                fcmToken
         );
     }
 
@@ -102,16 +106,18 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
         Organization o = lssdk.getOrganization();
         List<TipType> tt = o.getTipTypes();
         WritableArray arr = Arguments.createArray();
-        
-        for(TipType t : tt){
-            WritableMap map = Arguments.createMap();
-            map.putInt("value", t.getValue());
-            map.putString("name", t.getName());
-            map.putString("icon",t.getIcon());
-            map.putString("mapIcon",t.getMapIcon());
-            map.putString("hintText",t.getHintText());
-            map.putString("chatText", t.getChatText());
-            arr.pushMap(map);
+
+        if (tt != null) {
+            for (TipType t : tt) {
+                WritableMap map = Arguments.createMap();
+                map.putInt("value", t.getValue());
+                map.putString("name", t.getName());
+                map.putString("icon", t.getIcon());
+                map.putString("mapIcon", t.getMapIcon());
+                map.putString("hintText", t.getHintText());
+                map.putString("chatText", t.getChatText());
+                arr.pushMap(map);
+            }
         }
         promise.resolve(arr);
     }
@@ -163,7 +169,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void emergencyOptions(){
-        
+
     }
 
     @ReactMethod
@@ -218,10 +224,40 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void switchOrganization(Number orgId, final Promise promise){
-      LiveSafeSDK.getInstance().setOrganization(futureOrgID, organization -> {
-          promise.resolve(true)
-      },
+    public void endSession() {
+        LiveSafeSDK.getInstance().endSession(
+                new Result<Void>() {
+                    @Override
+                    public void call(Void v) {
+                        Log.i(TAG, "end session succcess");
+                    }
+                },
+                new Result<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        Log.w(TAG, "end session failed");
+                    }
+                });
+        );
+    }
+
+    @ReactMethod
+    public void setOrganization(Integer orgId, final Promise promise){
+      LiveSafeSDK.getInstance().setOrganization(orgId,
+              new Result<Integer>() {
+                  @Override
+                  public void call(Integer orgId) {
+                      Log.i(TAG, "setOrganization success");
+                      promise.resolve(orgId);
+                  }
+              },
+              new Result<Throwable>() {
+                  @Override
+                  public void call(Throwable throwable) {
+                      Log.w(TAG, "setOrganization failed");
+                      promise.reject(throwable);
+                  }
+              });
     }
 
 }

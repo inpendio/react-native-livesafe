@@ -10,7 +10,7 @@ class RNLiveSafe extends NativeEventEmitter {
     this.getTipHistory = nativeModule.getTipHistory;// ios & android
     this.submitTip = nativeModule.submitTip;// ios & android
     this.authentication = nativeModule.authentication;// ios & android
-    this.isLoggedIn = nativeModule.isLoggedIn;// ios (dont know if we need this, was following the readme)
+    this.isLoggedIn = nativeModule.isLoggedIn;// ios & android (dont know if we need this, was following the readme)
     this.updateUserLocation = nativeModule.updateUserLocation; //android & ios
     this.updateDeviceToken = nativeModule.updateDeviceToken //ios
     this.registerForNotifications = nativeModule.registerForNotifications //ios
@@ -19,7 +19,8 @@ class RNLiveSafe extends NativeEventEmitter {
     this.callLocalEmergencyService = nativeModule.callLocalEmergencyService; //android & ios
     this.callOrganizationSecurity = nativeModule.callOrganizationSecurity; //android & ios
     this.showTipHistory = nativeModule.showTipHistory; // ios
-    this.switchOrganization = nativeModule.switchOrganization; // ios & android
+    this.setOrganization = nativeModule.setOrganization; // ios & android
+    this.endSession = nativeModule.endSession;
   }
 }
 
