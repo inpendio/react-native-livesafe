@@ -41,13 +41,23 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     public static final int LS_MESSAGE_ORGANIZATION_SECURITY = 299933589;
 
     private final ReactApplicationContext reactContext;
+    private Promise loginPromise;
+    public void setLoginPromise(Promise promise){
+        this.loginPromise = promise;
+    }
 
     private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
 
         @Override
         public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
             if (requestCode == LS_LOGIN_ACTIVITY) {
-                Log.i(TAG, "LOGIN result came...");
+                if(loginPromise != null){
+                    if(resultCode==0) {
+                        loginPromise.resolve(new Boolean(false));
+                    }else if(resultCode==-1){
+                        loginPromise.resolve(new Boolean(true));
+                    }
+                }
             }else if(requestCode == LS_REPORT_TIP){
                 Log.i(TAG, "REPORT TIP result came...");
             }else if(requestCode == LS_MESSAGE_ORGANIZATION_SECURITY){
@@ -158,8 +168,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
         Activity currentActivity = getCurrentActivity();
         Intent intent = RegisterUserActivity.createIntent(this.reactContext);
         currentActivity.startActivityForResult(intent, LS_LOGIN_ACTIVITY);
-        // FIXME: make sure this returns true/false if auth is invalid
-        promise.resolve(true);
+        this.setLoginPromise(promise);
     }
 
     @ReactMethod
@@ -238,7 +247,6 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                         Log.w(TAG, "end session failed");
                     }
                 });
-        );
     }
 
     @ReactMethod

@@ -1,5 +1,3 @@
-def authToken = INSERT_JITPACK_AUTH_HERE
-
 buildscript {
     repositories {
         jcenter()
