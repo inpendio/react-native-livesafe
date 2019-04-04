@@ -1,7 +1,7 @@
 {
   "name": "react-native-livesafe",
   "title": "React Native Livesafe",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "",
   "main": "index.js",
   "scripts": {
