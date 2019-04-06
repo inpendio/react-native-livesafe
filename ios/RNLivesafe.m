@@ -356,4 +356,8 @@ RCT_REMAP_METHOD(setOrganization,
     }];
 }
 
+
+RCT_EXPORT_METHOD(stopActiveTracking) {
+    [[LSLocationServices shared] stopActiveTracking];
+}
 @end
