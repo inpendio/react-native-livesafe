@@ -36,9 +36,6 @@ import rx.functions.Func1;
 public class RNLivesafeModule extends ReactContextBaseJavaModule {
 
     private static final String TAG = "LiveSafeModule";
-    public static final int LS_LOGIN_ACTIVITY = 299933587;
-    public static final int LS_REPORT_TIP = 299933588;
-    public static final int LS_MESSAGE_ORGANIZATION_SECURITY = 299933589;
 
     private final ReactApplicationContext reactContext;
     private Promise loginPromise;
@@ -51,7 +48,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
 
         @Override
         public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
-            if (requestCode == LS_LOGIN_ACTIVITY) {
+            if (requestCode == RegisterUserActivity.REGISTER_USER_REQUEST_CODE) {
                 if (loginPromise != null) {
                     if (resultCode == 0) {
                         loginPromise.resolve(new Boolean(false));
@@ -59,10 +56,6 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                         loginPromise.resolve(new Boolean(true));
                     }
                 }
-            } else if (requestCode == LS_REPORT_TIP) {
-                Log.i(TAG, "REPORT TIP result came...");
-            } else if (requestCode == LS_MESSAGE_ORGANIZATION_SECURITY) {
-                Log.i(TAG, "LS_MESSAGE_ORGANIZATION_SECURITY result came...");
             }
         }
     };
@@ -159,14 +152,14 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
         );
         Activity currentActivity = getCurrentActivity();
         Intent intent = ReportTipActivity.createIntent(this.reactContext, tipType);
-        currentActivity.startActivityForResult(intent, LS_REPORT_TIP);
+        currentActivity.startActivity(intent);
     }
 
     @ReactMethod
     public void authentication(Promise promise) {
         Activity currentActivity = getCurrentActivity();
         Intent intent = RegisterUserActivity.createIntent(this.reactContext);
-        currentActivity.startActivityForResult(intent, LS_LOGIN_ACTIVITY);
+        currentActivity.startActivityForResult(intent, RegisterUserActivity.REGISTER_USER_REQUEST_CODE);
         this.setLoginPromise(promise);
     }
 
@@ -228,7 +221,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     public void messageOrganizationSecurity() {
         Activity currentActivity = getCurrentActivity();
         Intent intent = ReportTipActivity.createEmergencyMessageIntent(this.reactContext, "users_location_will_be_shared");
-        currentActivity.startActivityForResult(intent, LS_MESSAGE_ORGANIZATION_SECURITY);
+        currentActivity.startActivity(intent);
     }
 
     @ReactMethod
@@ -246,6 +239,19 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                         Log.w(TAG, "end session failed");
                     }
                 });
+    }
+
+
+    @ReactMethod
+    public void getOrganization(Integer orgId, final Promise promise) {
+        // There is no getOrganization on Android.
+
+        try {
+            Organization org = new Organization(orgId);
+            promise.resolve(org.getName());
+        } catch (Exception err) {
+            promise.reject(err);
+        }
     }
 
     @ReactMethod
