@@ -15,7 +15,6 @@ import com.livesafemobile.livesafesdk.base.LiveSafeSDK;
 import com.livesafemobile.livesafesdk.base.Organization;
 import com.livesafemobile.livesafesdk.common.Result;
 import com.livesafemobile.livesafesdk.login.RegisterUserActivity;
-import com.livesafemobile.livesafesdk.push.LiveSafePushReceiver;
 import com.livesafemobile.livesafesdk.tip.EmergencyCall;
 import com.livesafemobile.livesafesdk.tip.ReportTipActivity;
 import com.livesafemobile.livesafesdk.tip.Tip;
@@ -28,9 +27,7 @@ import android.content.Intent;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import rx.functions.Action1;
 import rx.functions.Func1;
@@ -76,7 +73,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void init(String key, String secret, String fcmToken, final Promise promise) {
-        Log.i(TAG, "livesafe init");
+        Log.i(TAG, "init");
         LiveSafeSDK.create(this.reactContext, new LiveSafeAuth(key, secret));
         LiveSafeSDK.getInstance().startSession(
                 new Result<Void>() {
@@ -162,9 +159,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     public void authentication(Promise promise) {
         Activity currentActivity = getCurrentActivity();
         Intent intent = RegisterUserActivity.createIntent(this.reactContext);
-        currentActivity.startActivityForResult(intent, LS_LOGIN_ACTIVITY);
-        // FIXME: make sure this returns true/false if auth is invalid
-        //promise.resolve(true);
+        currentActivity.startActivityForResult(intent, RegisterUserActivity.REGISTER_USER_REQUEST_CODE);
         this.setLoginPromise(promise);
     }
 
@@ -281,16 +276,6 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void stopActiveTracking() {
         // not implemented on android?
-    }
-
-    @ReactMethod
-    public void handleMessage(String mssg){
-        // convert readablemap to map<String, String>
-        Map<String,String> mssgMap = new HashMap<String, String>();
-        mssgMap.put("default", mssg);
-        LiveSafePushReceiver lsp = new LiveSafePushReceiver();
-        lsp.handleMessage(this.reactContext, mssgMap);
-
     }
 
 }
