@@ -93,7 +93,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
                         promise.reject(throwable);
                     }
                 },
-                fcmToken
+                null
         );
     }
 

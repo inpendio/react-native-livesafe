@@ -19,6 +19,7 @@ RCT_EXPORT_MODULE()
 
 RCT_REMAP_METHOD(init, :(NSString *)clientKey
                  secretKey:(NSString *)secretKey
+                 token:(NSString *)token
                  initWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject
                 )
@@ -34,7 +35,9 @@ RCT_REMAP_METHOD(init, :(NSString *)clientKey
                            completion:^(LSError *error) {
                                if (error != nil)
                                {
-                                   reject(@"init error", @"Could not init", (NSError* ) error);
+                               
+             
+                                   reject(@"init error", @"Could not init", [self LSErrorToNSError:error]);
                                    NSLog(@"LiveSafe SDK init failed");
                                } else
                                {
@@ -94,6 +97,19 @@ RCT_EXPORT_METHOD(startChatForTip: (NSDictionary*) tipDictionary){
 }
 
 
+-(NSError*) LSErrorToNSError: (LSError*) error {
+    NSString* message;
+    if(error.error) {
+        message = [NSString stringWithFormat:@"%@", error.error];
+    }else {
+        message = @"ERROR";
+    }
+    NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
+    [userInfo setValue: message forKey:NSLocalizedDescriptionKey];
+    NSError *nativeError = [NSError errorWithDomain:@"LiveSafe" code:400 userInfo:userInfo];
+    return nativeError;
+}
+
 // Util function to transform LSTipType to NSDictionary
 -(NSDictionary*)LSTipTypeToDictionary:(LSTipType*)tip{
     NSDictionary* tipNormalized =  @{
@@ -149,7 +165,7 @@ RCT_REMAP_METHOD(getTipTypes,
          }
          else
          {
-             reject(@"Error @getTypes", @"couldn't retrieve type types", (NSError* ) error);
+             reject(@"Error @getTypes", @"couldn't retrieve type types", [self LSErrorToNSError:error]);
          }
      }];
 }
@@ -159,7 +175,7 @@ RCT_REMAP_METHOD(getTipHistory,
                  getTipHistoryWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-    [LSTipSubmitManager getSubmittedTips:^(NSArray<LSTip *> * Tips, LSError * Error) {
+    [LSTipSubmitManager getSubmittedTips:^(NSArray<LSTip *> * Tips, LSError * error) {
         if (Tips)
         {
             NSMutableArray* tipsNormalized = [NSMutableArray array];
@@ -169,7 +185,7 @@ RCT_REMAP_METHOD(getTipHistory,
             resolve(tipsNormalized);
         }
         else {
-            reject(@"getSubmittedTypes error", @"Couldn't retrieve submitted types", (NSError* ) Error);
+            reject(@"getSubmittedTypes error", @"Couldn't retrieve submitted types", [self LSErrorToNSError:error]);
         }
     }];
 }
@@ -330,7 +346,7 @@ RCT_REMAP_METHOD(getOrganization,
        if (error != nil)
        {
            //Incompatible block pointer types sending 'void (^)(LSError *__strong)' to parameter of type 'void (^ _Nonnull)(LSOrganization * _Nullable __strong, LSError * _Nullable __strong)'
-           reject(@"getOrganization error", @"Could not get OrgID", (NSError* ) error);
+           reject(@"getOrganization error", @"Could not get OrgID", [self LSErrorToNSError:error]);
        }
        else
        {
@@ -347,7 +363,7 @@ RCT_REMAP_METHOD(setOrganization,
     [LSManager setOrganization: orgId completion:^(LSError *error) {
         if (error != nil)
         {
-            reject(@"setOrganization error", @"Could not set OrgID", (NSError* ) error);
+            reject(@"setOrganization error", @"Could not set OrgID", [self LSErrorToNSError:error]);
         }
         else
         {
