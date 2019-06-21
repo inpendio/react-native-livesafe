@@ -9,7 +9,7 @@
 
 #import <LiveSafe/LiveSafe.h>
 
-#import "../../../lane-next/lane-mobile/ios/lane/AppDelegate.h";
+#import "../../../ios/lane/AppDelegate.h";
 
 
 @interface RNLivesafe : NSObject <RCTBridgeModule>
