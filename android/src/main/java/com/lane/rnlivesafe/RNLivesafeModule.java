@@ -125,7 +125,7 @@ public class RNLivesafeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void getTipHistory() {
+    public void showTipHistory() {
         Activity currentActivity = getCurrentActivity();
         Intent intent = TipHistoryActivity.createIntent(this.reactContext);
         currentActivity.startActivity(intent);
