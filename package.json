@@ -1,7 +1,7 @@
 {
   "name": "react-native-livesafe",
   "title": "React Native Livesafe",
-  "version": "1.1.1",
+  "version": "1.2.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,16 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-livesafe.git",
-    "baseUrl": "https://github.com/github_account/react-native-livesafe"
+    "url": "git+https://github.com/joinlane/react-native-livesafe.git",
+    "baseUrl": "https://github.com/joinlane/react-native-livesafe"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "JoinLane",
+    "email": "info@joinlane.com",
+    "url": "https://www.joinlane.com/"
   },
+  "contributors": [
+    {
+      "name" : "Inpendio", 
+      "email" : "info@inpendio.com", 
+      "url" : "inpendio.com.com/"
+    }
+  ],
   "license": "Apache-2.0",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",

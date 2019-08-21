@@ -205,3 +205,15 @@ LiveSafe.messageOrganizationSecurity();
      *        uuid - String
 
 ```
+
+### Handling notifications on android
+As far as I can see, LiveSafe sdk looks for "default" part of message with source = "livesafe".
+Method handleMessage expects context and Map<String, String>, with second string being the message it self in stringified JSON form.
+When passing message to bridge method stringify message and pass it as String. Method will convert it to Map with one key="default"
+
+```javascript
+/**
+ * {String} - mssg -> JSON.stringify(notification.default || notification.source === 'livesafe)
+  */
+LiveSafe.handleMessage(mssg)
+```
