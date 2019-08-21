@@ -20,7 +20,6 @@ import com.livesafemobile.livesafesdk.tip.ReportTipActivity;
 import com.livesafemobile.livesafesdk.tip.Tip;
 import com.livesafemobile.livesafesdk.tip.TipHistoryActivity;
 import com.livesafemobile.livesafesdk.tip.TipType;
-import com.livesafemobile.safetymap.SafeMapActivity;
 
 import android.app.Activity;
 import android.content.Intent;
